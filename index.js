@@ -74,6 +74,8 @@
   // create a blockchain of any amount of blocks
   Blockchain.createBlockChain(12);
 
+  // adds a block at the end of the chain
+  // this would come from a client primarily
   Blockchain.addBlock(Blockchain.blockchain, JSON.stringify({
     id: 12345,
     file: {
