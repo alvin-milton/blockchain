@@ -52,19 +52,19 @@
           console.log("Block #" + blockToAdd.index + " has been added to the blockchain");
           console.log("Hash: " + blockToAdd.hash);
         }
-        console.log('blockchain', Blockchain.blockchain);
+        // console.log('blockchain', Blockchain.blockchain);
       }
       return Blockchain.blockchain;
     },
     addBlock: (blockchain, data) =>
     {
       let chainLength = blockchain[0];
-      console.log(chainLength);
+      // console.log(chainLength);
       let newBlockchain = () => {
         let tempBlockchain = Blockchain.createBlockChain()
         return tempBlockchain[0];
       }
-      console.log(Blockchain.blockchain.pop());
+      // console.log(Blockchain.blockchain.pop());
       let previousBlock = (blockchain[0] === null) ? newBlockchain() : Blockchain.blockchain[Blockchain.blockchain.length - 1]
       let blockToAdd = Blockchain.nextBlock(previousBlock, data);
       Blockchain.blockchain.push(blockToAdd);
